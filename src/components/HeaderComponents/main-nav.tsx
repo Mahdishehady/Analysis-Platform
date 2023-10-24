@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
+import { getFirstStringBetweenSlashes } from "../sidebarCom/sidebar"
 
 export function MainNav({
   className,
@@ -17,7 +18,7 @@ export function MainNav({
       <Link
         href="/publisher/analysis/authors"
         className={`text-sm font-medium  ${
-          pathname =='/publisher' ? '' : 'text-muted-foreground'
+          (getFirstStringBetweenSlashes(pathname + '/')=== "publisher")? 'text-primary' : 'text-muted-foreground'
         } transition-colors hover:text-primary`}
       >
         Publisher
@@ -25,7 +26,7 @@ export function MainNav({
       <Link
         href="/advertiser/media-planner/review-ad"
         className={`text-sm font-medium  ${
-          pathname =='/advertiser' ? '' : 'text-muted-foreground'
+          (getFirstStringBetweenSlashes(pathname + '/')=== "advertiser")? 'text-primary' : 'text-muted-foreground'
         } transition-colors hover:text-primary`}
       >
         Advertiser
@@ -33,7 +34,7 @@ export function MainNav({
       <Link
         href="/admin/user-managment"
         className={`text-sm font-medium  ${
-          pathname =='/admin' ? '' : 'text-muted-foreground'
+          (getFirstStringBetweenSlashes(pathname + '/')=== "admin")? 'text-primary' : 'text-muted-foreground'
         } transition-colors hover:text-primary`}
       >
         Admin

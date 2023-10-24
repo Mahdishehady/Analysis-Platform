@@ -17,17 +17,17 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   playlists: Playlist[]
 }
 
+export function getFirstStringBetweenSlashes(inputString: string): string | null {
+  const match = inputString.match(/\/([^/]+)\//);
+  if (match && match[1]) {
+    return match[1];
+  }
+  return null; // Return null if no match is found
+}
 
 export function Sidebar({ className }: SidebarProps) {
 
-  function getFirstStringBetweenSlashes(inputString: string): string | null {
-    const match = inputString.match(/\/([^/]+)\//);
-    if (match && match[1]) {
-      return match[1];
-    }
-    return null; // Return null if no match is found
-  }
-
+ 
 
   const pathname = usePathname()
 
@@ -585,6 +585,7 @@ export function Sidebar({ className }: SidebarProps) {
   else {
     check = "/admin"
   }
+console.log(pathname);
 
   switch (check) {
     case "/admin":
