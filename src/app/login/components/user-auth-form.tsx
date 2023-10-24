@@ -6,8 +6,9 @@ import { cn } from "@/lib/utils"
 import { Icons } from "@/components/ui/icons"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+
 import { useRouter } from "next/navigation"
+import { Label } from "@/components/ui/label"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> { }
 
@@ -30,10 +31,8 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     <div className={cn("grid gap-6", className)} {...props}>
       <form onSubmit={onSubmit}>
         <div className="grid gap-2">
-          <div className="grid gap-1">
-            <Label className="sr-only" htmlFor="email">
-              Email
-            </Label>
+          <div className="flex flex-col gap-4">
+         <h1 className="text-xl font-semibold">Enter your Email</h1>
             <Input
               id="email"
               placeholder="name@example.com"
@@ -44,13 +43,15 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               disabled={isLoading}
               required
             />
-          </div>
+         
           <Button disabled={isLoading}>
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
             Sign In
           </Button>
+          
+          </div>
         </div>
       </form>
       <div className="relative">
