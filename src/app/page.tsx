@@ -7,5 +7,8 @@ export default function Main() {
 
   const router=useRouter()
   router.push("/login")
+  return(
+    <></>
+  )
    
 }
