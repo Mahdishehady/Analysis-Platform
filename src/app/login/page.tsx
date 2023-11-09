@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils"
 import { UserAuthForm } from "./components/user-auth-form"
 
 export const metadata: Metadata = {
-  title: "Authentication",
-  description: "Authentication forms built using the components.",
+  title: "Analytics",
+  description: "Anaytics for clients about the users.",
 }
 
 export default function AuthenticationPage() {
@@ -21,7 +21,7 @@ export default function AuthenticationPage() {
           <div className="absolute inset-0 bg-black-900" />
           <div className="relative z-20 flex justify-center items-center text-4xl font-semibold h-[100%] ">
 
-            CognativeX-DemoWebsite
+            Analytics Platform
           </div>
          
          

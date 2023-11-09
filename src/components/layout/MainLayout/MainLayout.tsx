@@ -30,8 +30,8 @@ interface MyComponentProps {
 
 
 export const metadata: Metadata = {
-  title: "Music App",
-  description: "Example music app using the components.",
+  title: "Analytics App",
+  description: "Website that shows the analytics.",
 }
 
 export default function MainLayout({ children }: MyComponentProps) {
