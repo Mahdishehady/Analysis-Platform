@@ -89,7 +89,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
         />
 
 
-        <AvatarFallback>CX</AvatarFallback>
+        <AvatarFallback></AvatarFallback>
       </Avatar>
       <Dialog open={showNewTeamDialog} onOpenChange={setShowNewTeamDialog}>
         <Popover open={open} onOpenChange={setOpen}>
