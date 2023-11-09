@@ -85,7 +85,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
       <Avatar className="mr-2 h-8 w-8 ">
         <AvatarImage
           src="/favicon.ico"
-          alt="CX"
+          alt=""
         />
 
 
