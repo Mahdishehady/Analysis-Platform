@@ -9,11 +9,11 @@ The Analytics Platform is a comprehensive tool designed for organizations to man
 ##Usage
 Once the platform is set up, navigate to the provided URL to interact with the analytics dashboard. Explore the various features and insights available to effectively manage and monitor your organization's website.
 
-##Contributing
+## Contributing
 We welcome contributions to enhance the Analytics Platform.
 
 
-##Dependencies
+## Dependencies
 * Next.js
 * React
 * Tailwind CSS
